@@ -1,0 +1,132 @@
+/* Resets */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+} 
+
+li {
+    list-style: none;
+}
+
+/* Variables */
+
+:root {
+    --primary-color: #fff;
+    --secondary-color: rgb(121, 162, 243);
+    --accent-color: rgb(243, 182, 69);
+    --background-color: silver;
+    --font-color: black;
+}
+
+/* Icons/Imgs */
+
+.interfaceIcons {
+    width: 20px;
+    height: auto;
+    fill: var(--primary-color);
+    padding-right: 20px;
+}
+
+.interfaceIconDashboard {
+    width: 80px;
+    height: auto;
+    fill: var(--primary-color);
+
+}
+
+.profileIcons {
+    width: 60px;
+}
+
+.leftNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    background-color: var(--secondary-color);
+    width: 300px;
+    height: 100vh;
+    padding-top: 50px;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    justify-items: center;
+    margin-left: 50px;
+    margin-top: 50px;
+    font-weight: 550;
+}
+
+.dashboardTitle {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    align-items: flex-start;
+}
+
+.title {
+    align-self: center;
+}
+
+.topNav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 75vw;
+    height: 25vh;
+    gap: 20px;
+    background-color: var(--background-color);
+    padding-top: 20px;
+}
+
+.topnav ol {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+.topnav li {
+    border: 1px solid var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    padding: 5px 8px;
+}
+
+.adminPanel {
+    display: grid;
+    grid-template-areas: 
+    "dashboard search userinfo"
+    "dashboard currentuser topnav";
+}
+
+.topSearch {
+    grid-area: search;
+}
+
+.userInfo {
+    grid-area: userInfo;
+}
+
+.currentUser {
+    grid-area: currentUser;
+}
+
+.topnav {
+    grid-area: topnav;
+}
+
+.search {
+    width: 400px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: var(--primary-color);
+}
+
+.searchIcon {
+    padding-left: 10px;
+    width: 25px;
+}

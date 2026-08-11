@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Admin Panel</title>
   </head>
   <body>
-    <header>
+    <div class="adminPanel">
+      <div class="leftNav">
+        <div class="dashboardTitle">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 640 640"
-        class="interfaceIcons"
+        class="interfaceIconDashboard"
       >
         <!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
         <path
@@ -19,6 +21,7 @@
         />
       </svg>
       <h1 class="title">Dashboard</h1>
+      </div>
       <nav class="navigation">
         <ol class="navLinks">
           <li>
@@ -131,8 +134,28 @@
           </li>
         </ol>
       </nav>
-    </header>
-    <main>
+      </div>
+      <div class="topNav">
+      <div class="topSearch">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          id="Outline"
+          viewBox="0 0 24 24"
+          width="512"
+          height="512"
+          class="interfaceIcons searchIcon"
+        >
+          <path
+            d="M23.707,22.293l-5.969-5.969a10.016,10.016,0,1,0-1.414,1.414l5.969,5.969a1,1,0,0,0,1.414-1.414ZM10,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,10,18Z"
+          />
+        </svg>
+        <input
+          class="search"
+          type="text"
+          id="search"
+          placeholder="Enter your search"
+        />
+      </div>
       <div class="userInfo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -147,33 +170,6 @@
         <img src="assets/profile.png" class="profileIcons" />
         <p class="userName">Ryan Shill</p>
       </div>
-      <div class="topnav">
-        <ol class="navTwo">
-          <li>New</li>
-          <li>Upload</li>
-          <li>Share</li>
-        </ol>
-      </div>
-      <div class="topSearch">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          id="Outline"
-          viewBox="0 0 24 24"
-          width="512"
-          height="512"
-          class="interfaceIcons"
-        >
-          <path
-            d="M23.707,22.293l-5.969-5.969a10.016,10.016,0,1,0-1.414,1.414l5.969,5.969a1,1,0,0,0,1.414-1.414ZM10,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,10,18Z"
-          />
-        </svg>
-        <input
-          class="search"
-          type="text"
-          id="search"
-          placeholder="Enter your search"
-        />
-      </div>
       <div class="loggedinUser">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -187,8 +183,17 @@
         </svg>
         <p class="intror">Hi there,</p>
         <p class="currentUser">Ryan Shill (@ryan)</p>
+        <img src="assets/profile.png" class="profileIcons" />
       </div>
-    </main>
+      <div class="topnav">
+        <ol class="navTwo">
+          <li>New</li>
+          <li>Upload</li>
+          <li>Share</li>
+        </ol>
+      </div>
+      </div>
+    </div>
     <footer></footer>
   </body>
 </html>
