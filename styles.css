@@ -1,3 +1,13 @@
+/* Variables */
+
+:root {
+    --primary-color: #fff;
+    --secondary-color: rgb(121, 162, 243);
+    --accent-color: rgb(243, 182, 69);
+    --background-color: rgb(236, 236, 236);
+    --font-color: black;
+}
+
 /* Resets */
 
 * {
@@ -10,14 +20,8 @@ li {
     list-style: none;
 }
 
-/* Variables */
-
-:root {
-    --primary-color: #fff;
-    --secondary-color: rgb(121, 162, 243);
-    --accent-color: rgb(243, 182, 69);
-    --background-color: silver;
-    --font-color: black;
+body {
+    background-color: var(--background-color);
 }
 
 /* Icons/Imgs */
@@ -36,7 +40,7 @@ li {
 }
 
 .profileIcons {
-    width: 60px;
+    width: 40px;
 }
 
 .leftNav {
@@ -48,15 +52,33 @@ li {
     gap: 0px;
 }
 
+.userInfo {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.userName {
+    font-weight: 600;
+}
+
 .topnav {
     align-self: center;
+}
+
+.bell {
+    fill: var(--font-color);
 }
 
 /* Grids */
 
 .adminPanel {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 300px 1fr 1fr;
     grid-template-rows: 80px 80px repeat(3, 1fr);
     grid-template-areas: 
     "dashboard search userinfo"
@@ -66,9 +88,17 @@ li {
     "dashboard projectsThree trending";
     width: 100vw;
     height: 100vh;
+
 }
 
 /* Flexbox */
+
+.topSearch {
+    display: flex;
+    flex-direction: row;
+    height: 35px;
+    padding-bottom: 100px;
+}
 
 .leftNav {
     display: flex;
@@ -77,7 +107,7 @@ li {
     background-color: var(--secondary-color);
     width: 300px;
     height: 100vh;
-    padding-top: 50px;
+    padding-top: 20px;
     grid-area: dashboard;
 }
 
@@ -98,23 +128,14 @@ li {
     align-items: flex-start;
 }
 
-/*.topNav {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "search userinfo"
-    "currentuser topnav";
-    width: 80vw;
-    height: 25vh;
-    gap: 20px;
-    background-color: var(--background-color);
-    padding-top: 20px;
-}*/
-
 .topnav ol {
     display: flex;
     flex-direction: row;
     gap: 60px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    padding-right: 50px;
 }
 
 .topnav li {
@@ -148,6 +169,7 @@ li {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    justify-content: right;
 }
 
 .intro {
@@ -205,4 +227,8 @@ li {
     border-radius: 10px;
     width: 250px;
     height: auto;
+}
+
+.projectsOne, .projectsTwo, .projectsThree, .announcements, .trending {
+    background-color: var(--background-color);
 }
