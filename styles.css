@@ -33,12 +33,37 @@ li {
     width: 80px;
     height: auto;
     fill: var(--primary-color);
-
+    
 }
 
 .profileIcons {
     width: 60px;
 }
+
+/* Grids */
+
+.adminPanel {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    "dashboard search userinfo"
+    "dashboard currentuser topnav"
+    "dashboard projectsOne announcements"
+    "dashboard projectsTwo announcements"
+    "dashboard projectsThree trending";
+}
+
+.projects {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "projectsOne"
+    "projectsTwo"
+    "projectsThree";
+}
+
+/* Flexbox */
 
 .leftNav {
     display: flex;
@@ -66,10 +91,7 @@ li {
     flex-direction: row;
     gap: 0;
     align-items: flex-start;
-}
-
-.title {
-    align-self: center;
+    grid-area: dashboard;
 }
 
 .topNav {
@@ -96,29 +118,6 @@ li {
     padding: 5px 8px;
 }
 
-.adminPanel {
-    display: grid;
-    grid-template-areas: 
-    "dashboard search userinfo"
-    "dashboard currentuser topnav";
-}
-
-.topSearch {
-    grid-area: search;
-}
-
-.userInfo {
-    grid-area: userInfo;
-}
-
-.currentUser {
-    grid-area: currentUser;
-}
-
-.topnav {
-    grid-area: topnav;
-}
-
 .search {
     width: 400px;
     padding: 10px;
@@ -129,4 +128,67 @@ li {
 .searchIcon {
     padding-left: 10px;
     width: 25px;
+}
+
+.loggedinUser {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.intro {
+    align-self: flex-start;
+}
+
+.currentUser {
+    align-self: center;
+}
+
+/* Grid Areas */
+
+.topSearch {
+    grid-area: search;
+}
+
+.userInfo {
+    grid-area: userInfo;
+}
+
+.loggedinUser {
+    grid-area: currentUser;
+}
+
+.title {
+    align-self: center;
+}
+
+.topnav {
+    grid-area: topnav;
+}
+
+.projectsOne {
+    grid-area: projectsOne;
+}
+
+.projectsTwo {
+    grid-area: projectsTwo;
+}
+
+.projectsThree {
+    grid-area: projectsThree;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
+}
+
+.projectsOne, .projectsTwo, .projectsThree {
+    border: 1px solid var(--background-color);
+    border-radius: 10px;
+    width: 250px;
+    height: auto;
 }
