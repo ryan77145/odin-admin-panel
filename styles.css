@@ -30,11 +30,11 @@ body {
     width: 20px;
     height: auto;
     fill: var(--primary-color);
-    padding-right: 20px;
+    padding-right: 30px;
 }
 
 .interfaceIconDashboard {
-    width: 80px;
+    width: 60px;
     height: auto;
     fill: var(--primary-color);
 }
@@ -42,6 +42,18 @@ body {
 .profileIcons {
     width: 40px;
     align-self: center;
+}
+
+.projectIcons {
+    width: 20px;
+}
+
+.projectSVGs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
 .leftNav {
@@ -60,8 +72,8 @@ body {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    padding-top: 40px;
-    height: 40px;
+    padding-top: 20px;
+    height: 30px;
     align-items: center;
     justify-content: center;
 }
@@ -76,6 +88,11 @@ body {
 
 .bell {
     fill: var(--font-color);
+    width: 20px;
+}
+
+.userImg {
+    width: 20px;
 }
 
 /* Grids */
@@ -83,7 +100,7 @@ body {
 .adminPanel {
     display: grid;
     grid-template-columns: 300px 1fr 1fr;
-    grid-template-rows: 80px 80px repeat(3, 1fr);
+    grid-template-rows: 50px 50px repeat(3, 1fr);
     grid-template-areas: 
     "dashboard search userinfo"
     "dashboard currentuser topnav"
@@ -101,7 +118,7 @@ body {
     display: flex;
     flex-direction: row;
     height: 35px;
-    padding-top: 45px;
+    padding-top: 15px;
 }
 
 .leftNav {
@@ -139,7 +156,6 @@ body {
     height: 80px;
     align-items: center;
     justify-content: center;
-    padding-right: 50px;
 }
 
 .topnav li {
@@ -169,10 +185,10 @@ body {
     "img intro"
     "img user";
     gap: 10px;
-    align-items: flex-start;
-    justify-content: left;
-    height: 50px;
-    padding-top: 30px;
+    align-items: center;
+    justify-content: flex-start;
+    height: 55px;
+    padding-top: 10px;
     padding-left: 20px;
     
 }
@@ -190,6 +206,7 @@ body {
     align-self: center;
     grid-area: user;
     padding-bottom: 5px;
+    height: 50px;
 }
 
 /* Grid Areas */
@@ -208,6 +225,7 @@ body {
 
 .title {
     align-self: center;
+    font-size: 25px;
 }
 
 .topnav {
@@ -245,9 +263,8 @@ body {
     border-bottom: 1px solid var(--background-color);
     border-left: 5px solid var(--accent-color);
     border-radius: 10px;
-    width: 200px;
-    height: 500px;
-    height: auto;
+    width: 150px;
+    height: 175px;
     background-color: var(--primary-color);
     padding: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -255,11 +272,11 @@ body {
 
 .projectTitle {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .projectText {
-    font-size: 12px;
+    font-size: 10px;
     margin-top: 10px;
 }
 
