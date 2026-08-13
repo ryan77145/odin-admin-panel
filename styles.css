@@ -54,6 +54,7 @@ body {
     align-items: center;
     justify-content: flex-end;
     gap: 10px;
+    padding-top: 5px;
 }
 
 .leftNav {
@@ -72,8 +73,8 @@ body {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    padding-top: 20px;
-    height: 30px;
+    height: 40px;
+    padding-top: 10px;
     align-items: center;
     justify-content: center;
 }
@@ -92,24 +93,24 @@ body {
 }
 
 .userImg {
-    width: 20px;
+    width: 40px;
 }
 
 /* Grids */
 
 .adminPanel {
     display: grid;
-    grid-template-columns: 300px 1fr 1fr;
-    grid-template-rows: 50px 50px repeat(3, 1fr);
-    grid-template-areas: 
+    grid-template-columns: 250px 1fr 1fr;
+    grid-template-rows: 50px 80px 1fr 0.25fr 0.75fr 1fr;
+    grid-template-areas:
     "dashboard search userinfo"
     "dashboard currentuser topnav"
     "dashboard projectsOne announcements"
     "dashboard projectsTwo announcements"
+    "dashboard projectsTwo trending"
     "dashboard projectsThree trending";
     width: 100vw;
     height: 100vh;
-
 }
 
 /* Flexbox */
@@ -126,7 +127,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     background-color: var(--secondary-color);
-    width: 300px;
+    width: 250px;
     height: 100vh;
     padding-top: 20px;
     grid-area: dashboard;
@@ -167,6 +168,7 @@ body {
 
 .search {
     width: 400px;
+    height: 10px;
     padding: 10px;
     border-radius: 15px;
     background-color: var(--background-color);
@@ -184,21 +186,22 @@ body {
     grid-template-areas: 
     "img intro"
     "img user";
-    gap: 10px;
+    gap: 20px;
     align-items: center;
-    justify-content: flex-start;
-    height: 55px;
-    padding-top: 10px;
+    height: 75px;
+    padding-top: 5px;
     padding-left: 20px;
-    
 }
 
 .userimg {
     grid-area: img;
+    align-self: center;
+    height: 40px;
+    width: 40px;
 }
 
 .intro {
-    align-self: flex-start;
+    align-self: center;
     grid-area: intro;
 }
 
@@ -206,7 +209,6 @@ body {
     align-self: center;
     grid-area: user;
     padding-bottom: 5px;
-    height: 50px;
 }
 
 /* Grid Areas */
@@ -249,12 +251,12 @@ body {
 
 .announcements {
     grid-area: announcements;
-    
+    margin-top: 20px;
 }
 
 .trending {
     grid-area: trending;
-    
+    margin-top: 80px;
 }
 
 .projectOne, .projectTwo, .projectThree, .projectFour, .projectFive, .projectSix {
@@ -263,8 +265,8 @@ body {
     border-bottom: 1px solid var(--background-color);
     border-left: 5px solid var(--accent-color);
     border-radius: 10px;
-    width: 150px;
-    height: 175px;
+    width: 250px;
+    height: 125px;
     background-color: var(--primary-color);
     padding: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -275,35 +277,82 @@ body {
     font-size: 14px;
 }
 
+.announcementTitle {
+    font-weight: 550;
+    font-size: 14px;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+.trendingTitle {
+    font-weight: 600px;
+    font-size: 14px;
+}
+
+.trending {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+.announcementText {
+    font-size: 10px;
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+.trendingText {
+    font-size: 10px;
+}
+
 .projectText {
     font-size: 10px;
     margin-top: 10px;
 }
 
-/*.announcements, .trending {
-    
-}*/
+.announcements, .trending {
+    border-right: 1px solid var(--background-color);
+    border-top: 1px solid var(--background-color);
+    border-bottom: 1px solid var(--background-color);
+    border-radius: 10px;
+    width: 210px;
+    height: 250px;
+    background-color: var(--primary-color);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    align-self: start;
+    justify-self: start;
+    margin-left: 30px;
+}
 
 .projectsOne {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 20px;
     padding-left: 30px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .projectsTwo {
     display: flex;
     flex-direction: row;
-    gap: 50px; 
+    gap: 20px; 
     padding-left: 30px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .projectsThree {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 20px;
     padding-left: 30px;
-    margin-top: 30px;
+    margin-top: 20px;
+}
+
+.trendingOne, .trendingTwo, .trendingThree, .trendingFour {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-top: 5px;
 }
